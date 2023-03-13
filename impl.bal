@@ -14,11 +14,11 @@ public type Employee record {|
     string job_title;
 |};
 
-string USER = "root";
-string PASSWORD = "Q1&jK;^e1lUd(0fu";
-string HOST = "35.192.136.209";
-int PORT = 3306;
-string DATABASE = "Company";
+configurable string USER = ?;
+configurable string PASSWORD = ?;
+configurable string HOST = ?;
+configurable int PORT = ?;
+configurable string DATABASE = ?;
 
 final mysql:Client dbClient = check new(
     host=HOST, user=USER, password=PASSWORD, port=PORT, database="Company"
